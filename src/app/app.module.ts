@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 
 import { ToDoModule } from './to-do/to-do.module';
 
+import { MdButtonModule, MdCheckboxModule, MdInputModule, 
+         MdListModule, MdIconModule, MaterialModule } from '@angular/material';
+
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -11,7 +14,9 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    ToDoModule
+    ToDoModule,
+    MdButtonModule, MdCheckboxModule, MdInputModule, 
+    MdListModule, MdIconModule, MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
