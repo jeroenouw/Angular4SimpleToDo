@@ -1,5 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { ToDo } from '../model/to-do.model';
 import { ToDoComponent } from './to-do.component';
 
 describe('ToDoComponent', () => {
@@ -22,4 +23,10 @@ describe('ToDoComponent', () => {
   it('should be created', () => {
     expect(component).toBeTruthy();
   });
+
+  it(`should have a new todo`, async(() => {
+    let fixture = TestBed.createComponent(ToDoComponent);
+    let app = fixture.debugElement.componentInstance;
+    expect(app.newTodo instanceof ToDo).toBeTruthy()
+  }));
 });
