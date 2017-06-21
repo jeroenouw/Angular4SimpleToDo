@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ToDo } from '../model/to-do.model';
+import { ToDoService } from '../service/to-do.service';
 
 @Component({
   selector: 'app-to-do',
@@ -7,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ToDoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private todoService: ToDoService) {
+  }
 
   ngOnInit() {
   }
