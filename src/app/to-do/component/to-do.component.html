@@ -1,6 +1,49 @@
 <div id="content">
   <md-card>
+
     <h1>Simple To Do List - Angular 4 and Material Design</h1>
+    <hr>
+
+    <md-input-container class="full-width">
+      <input mdInput
+      class="new-todo" 
+      placeholder="Write something down..." 
+      autofocus="" 
+      [(ngModel)]="newTodo.title" 
+      (keyup.enter)="addTodo()">
+    </md-input-container>
+ 
+    <div class="main" *ngIf="todos.length > 0">
+      <md-list class="todo-list">
+        <md-list-item *ngFor="let todo of todos" [class.completed]="todo.complete">
+                  
+          <md-checkbox
+          class="toggle" 
+          type="checkbox" 
+          (click)="toggleTodoComplete(todo)" 
+          [checked]="todo.complete">
+          </md-checkbox>
+          
+          <label>{{todo.title}}</label>
+
+          <button md-button class="destroy" (click)="removeTodo(todo)">
+            <md-icon>delete_forever</md-icon>
+          </button>
+          
+        </md-list-item>
+      </md-list>
+    </div>
+
+    <br />
+    <hr>
+    <br />
+
+    <div class="footer" *ngIf="todos.length > 0">
+      <span class="todo-count">
+        <strong>{{todos.length}}</strong> 
+        {{todos.length == 1 ? 'thing' : 'things'}} to do...
+      </span>
+    </div>
 
   </md-card>
 </div>
