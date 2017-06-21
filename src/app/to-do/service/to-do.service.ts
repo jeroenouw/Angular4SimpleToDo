@@ -28,4 +28,21 @@ export class ToDoService {
       .pop();
   }
 
+  // Update/Put
+  updateTodoById(id: number, values: Object = {}): ToDo {
+    let todo = this.getTodoById(id);
+    if (!todo) {
+      return null;
+    }
+    Object.assign(todo, values);
+    return todo;
+  }
+
+  // Delete
+  deleteTodoById(id: number): ToDoService {
+    this.todos = this.todos
+      .filter(todo => todo.id !== id);
+    return this;
+  }
+
 }
