@@ -44,5 +44,13 @@ export class ToDoService {
       .filter(todo => todo.id !== id);
     return this;
   }
+  
+  // Complete
+  toggleTodoComplete(todo: ToDo){
+    let updatedTodo = this.updateTodoById(todo.id, {
+      complete: !todo.complete
+    });
+    return updatedTodo;
+  }
 
 }

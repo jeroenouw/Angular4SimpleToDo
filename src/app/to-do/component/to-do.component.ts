@@ -16,17 +16,25 @@ export class ToDoComponent implements OnInit {
   ngOnInit() {
   }
 
+  // Create/Post
   addTodo() {
     this.todoService.addTodo(this.newTodo);
     this.newTodo = new ToDo();
   }
 
+  // Read/Get
+  get todos() {
+    return this.todoService.getAllTodos();
+  }
+
+  // Delete
   removeTodo(todo) {
     this.todoService.deleteTodoById(todo.id);
   }
 
-  get todos() {
-    return this.todoService.getAllTodos();
+  // Complete
+  toggleTodoComplete(todo) {
+    this.todoService.toggleTodoComplete(todo);
   }
 
 }
