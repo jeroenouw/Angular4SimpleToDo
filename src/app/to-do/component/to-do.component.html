@@ -10,13 +10,11 @@
       (keyup.enter)="addTodo()">
     </md-input-container>
  
-    <div class="main" *ngIf="todos.length > 0">
+    <div *ngIf="todos.length > 0">
       <md-list class="todo-list">
         <md-list-item *ngFor="let todo of todos" [class.completed]="todo.complete">
                   
-          <md-checkbox
-          class="toggle" 
-          type="checkbox" 
+          <md-checkbox 
           (click)="toggleTodoComplete(todo)" 
           [checked]="todo.complete">
           </md-checkbox>
@@ -35,11 +33,9 @@
     <hr>
     <br />
 
-    <div class="footer" *ngIf="todos.length > 0">
-      <span class="todo-count">
-        <strong>{{todos.length}}</strong> 
-        {{todos.length == 1 ? 'thing' : 'things'}} to do...
-      </span>
+    <div *ngIf="todos.length > 0">
+      <strong>{{todos.length}}</strong> 
+      {{todos.length == 1 ? 'thing' : 'things'}} to do...
     </div>
 
   </md-card>

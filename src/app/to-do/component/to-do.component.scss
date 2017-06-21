@@ -1,3 +1,5 @@
+$color-silver: #aaa;
+
 #content { 
   padding: 20px;
   width: 500px;
@@ -6,4 +8,24 @@
 
 label {
   margin-left: 15px;
+}
+
+button {
+  padding: 0px;
+  margin: 0 16px;
+  min-width: 10px;
+}
+
+.todo-list md-list-item.completed label  {
+	transition: color 0.3s ease-out;
+  text-decoration: line-through;
+  color: $color-silver;
+}
+
+@media (max-width: 550px) {
+
+  #content { 
+    width: 90%;
+  }
+
 }
