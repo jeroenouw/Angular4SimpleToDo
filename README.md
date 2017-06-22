@@ -1,6 +1,10 @@
+[![demolive](https://img.shields.io/badge/demo-live-green.svg)](http://angulartodo.jerouw.nl/)
+[![license](https://img.shields.io/npm/l/express.svg)](https://github.com/jeroenouw/Angular4SimpleToDo/blob/master/LICENSE)
+[![dependencies](https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen.svg)](https://github.com/jeroenouw/Angular4SimpleToDo/blob/master/package.json)
+
 ![logo](https://jerouw.nl/wp-content/uploads/2017/06/angulartodomaterial.png "Logo")  
 
-# Angular4 | Material Design - Simple To Do app
+# Angular 4 | Material Design - Simple To Do app
 [Angular 4](https://angular.io) and [Material](https://material.io/) Simple To Do app.
 
 ## [Live demo](http://angulartodo.jerouw.nl)
