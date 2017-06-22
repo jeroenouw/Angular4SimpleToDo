@@ -1,5 +1,7 @@
 {
   "name": "angular4-simple-todo",
+  "author": "Jeroen Ouwehand",
+  "description": "Simple to do app, made with Angular and Material design.",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {

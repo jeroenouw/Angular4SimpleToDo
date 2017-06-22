@@ -2,26 +2,26 @@
   <md-card>
 
     <md-input-container class="full-width">
-      <input mdInput
-      class="new-todo" 
+      <input mdInput 
       placeholder="Write something down..." 
       autofocus="" 
       [(ngModel)]="newTodo.title" 
       (keyup.enter)="addTodo()">
     </md-input-container>
- 
+    
     <div *ngIf="todos.length > 0">
       <md-list class="todo-list">
-        <md-list-item *ngFor="let todo of todos" [class.completed]="todo.complete">
+        <md-list-item 
+        *ngFor="let todo of todos" 
+        [class.completed]="todo.complete">
                   
           <md-checkbox 
-          (click)="toggleTodoComplete(todo)" 
-          [checked]="todo.complete">
+          (click)="toggleTodoComplete(todo)">
           </md-checkbox>
           
           <label>{{todo.title}}</label>
 
-          <button md-button class="destroy" (click)="removeTodo(todo)">
+          <button md-button (click)="removeTodo(todo)">
             <md-icon>delete_forever</md-icon>
           </button>
           
@@ -35,7 +35,7 @@
 
     <div *ngIf="todos.length > 0">
       <strong>{{todos.length}}</strong> 
-      {{todos.length == 1 ? 'thing' : 'things'}} to do...
+      {{todos.length == 1 ? 'thing' : 'things'}} on the list...
     </div>
 
   </md-card>
