@@ -7,8 +7,7 @@
 # Angular 4 | Material Design - Simple To Do app
 [Angular 4](https://angular.io) and [Material](https://material.io/) Simple To Do app.
 
-## [Live demo](http://angulartodo.jerouw.nl)
-[Live demo](http://angulartodo.jerouw.nl), in progress.  
+## [Live demo](http://angulartodo.jerouw.nl)  
 ![todoapp](https://jerouw.nl/wp-content/uploads/2017/06/angulartodo.png "Logo")
 
 ## Quick start
@@ -19,3 +18,13 @@ Run `npm start` or `ng serve` to run this project.
 Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.  
 
 To build the project run `npm run build`.
+/localhost:4200/`. The app will automatically reload if you change any of the source files.  
+
+To build the project run `npm run build`.
+
+### Including in this repo:
+* Angular 4 environment
+* Material Design
+* Simple To Do list
+* Counting items on the list
+* Checked animation
